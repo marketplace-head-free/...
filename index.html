@@ -1,0 +1,520 @@
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!--[if lt IE 7]> <html xmlns="http://www.w3.org/1999/xhtml" class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html xmlns="http://www.w3.org/1999/xhtml" class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html xmlns="http://www.w3.org/1999/xhtml" class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html xmlns="http://www.w3.org/1999/xhtml"> <!--<![endif]-->
+
+<!-- Mirrored from id.secondlife.com/openid/login?return_to=https%3A%2F%2Fmarketplace.secondlife.com%2F&language=en-US&show_join=true&_gl=1*11eno2*_ga*MTI5Njk5NjU1MC4xNzIzOTA5NTIy*_ga_T7G7P6DCEC*MTcyNDExMDI0OS40LjAuMTcyNDExMDI0OS4wLjAuNjQzNzUzNzky*_fplc*YTc3cVdDeUIlMkZ6SmwySmNGTWE4UjgxVWpIZXd5JTJCQlJpN05rb3FVbjRaZDAlMkZvRHI0QWNVVWZLZTByOHFoMzhEVDhoOE1MVjIwN3hZNkcyVmlLR1pGSTJjMWVjJTJGVDk3em9lblk2VVFrVlN1cmclMkZKQXZaYklOSUxJZUJGYXcydyUzRCUzRA.. by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 19 Aug 2024 23:31:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+
+
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='../../radix.secondlife.com/gtm5445.html?id='+i+dl';f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MFW9KQS');</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="description" content="Second Life login" />
+<meta name="keywords" content="" />
+
+  <title>Second Life: Sign In</title>
+  <link rel="stylesheet" type="text/css" href="../../s3.amazonaws.com/common.web.secondlife.com/_css/blueprint/screen.css" media="screen, projection" />
+  <!--[if IE]><link rel="stylesheet" href="https://s3.amazonaws.com/common.web.secondlife.com/_css/blueprint/ie.css" type="text/css" media="screen, projection" /><![endif]-->
+
+  <link rel="icon" type="image/vnd.microsoft.icon" href="https://s3.amazonaws.com/common.web.secondlife.com/favicon.ico" />
+
+
+  <script type="text/javascript" src="../../s3.amazonaws.com/common.web.secondlife.com/_js/jquery-1.8.3.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#more-about-username").click(function () {
+        $("#help_notes").fadeIn(1000);
+        // $("#error_message").fadeOut(500);
+      });
+      $('#username').focus(function() {
+        $("#help_notes").fadeOut(1000);
+        // $("#error_message").fadeIn(500);
+      });
+
+      
+    });
+  </script>
+
+  <style type="text/css">
+  /* ==========================================
+  ** GLOBAL STYLES
+  ** ========================================== */
+  body{ font-family:Arial,Helvetica,Verdana,sans-serif; }
+  a {color:#5cb192;font-weight:bold;text-decoration:none;}
+  a:hover {color:#ff6a00;}
+
+
+  /* Production Stuff - from reg-in-progress main996.css */
+
+  body {
+    background: #e8e9ec url(../../s3.amazonaws.com/common.web.secondlife.com/_img/bg.gif) top left repeat-x;
+    margin-top: 0;
+    margin-bottom: -30px;
+    padding-bottom: 0;
+    font-size: 0.8em;
+  }
+
+  .container {
+    background: #e8e9ec url(../../s3.amazonaws.com/common.web.secondlife.com/_img/bg.gif) top left repeat-x;
+  }
+
+  #containerShadowMain {
+    width: 1080px;
+    background: url(../../s3.amazonaws.com/common.web.secondlife.com/_img/bg_main_shadow.gif) top left repeat-y;
+    margin: 0 auto;
+    padding: 0;
+    /*border-bottom: 2px solid;*/
+  }
+
+  #containerShadowTop {
+    background: url(../../s3.amazonaws.com/common.web.secondlife.com/_img/bg_top_shadow.gif) top left no-repeat;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  /* override screen.css */
+  input.text, input.title, textarea, select, input { margin: 0; }
+  input.checkbox { margin-right: 5px; }
+  form { margin:0; padding:0;position:relative; }
+  h4 {font-weight:bold;}
+
+  .note {
+    display:none;
+    background-color:#F7F2CA;
+    margin-top:-4px;
+    padding:10px 12px;
+    position:absolute;
+    right:0;
+    right:0;
+    top:-65px;
+    width:300px;
+    z-index: 1000;
+    border: 1px solid #FBEED5;
+  }
+
+  .note.error {
+    background: #FBE3E4;
+    color: #8A1F11;
+    border-color: #FBC2C4;
+    z-index: 999;
+    display: block;
+  }
+
+  #header {
+    border-bottom: 1px solid #383838;
+    height: 56px;
+    background-color:#000;
+  }
+  #sl-logo a {
+  background:url("../../s3.amazonaws.com/common.web.secondlife.com/_img/sl-logo-login.png") no-repeat scroll left top transparent;
+  display:block;
+  background-size: 100% 100%;
+  float:left;
+  height:33px;
+  margin:12px 0 0 35px;
+  outline:medium none;
+  text-indent:-2000em;
+  width:66px;
+  }
+
+  #header h1#logo {
+    height: 56px;
+    margin: 0;
+  }
+
+  #header h1#logo span {
+    display: none;
+  }
+
+#more-about-username { display:inline; padding:7px 0 0 7px;margin:0; float:none;}
+  /* MAIN CONTENT BUTTONS or LARGER BUTTONS */
+  .clearbutton {
+    overflow:hidden;
+    width:100%;
+  }
+
+  .css_button_hot {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font: 14px Arial, Helvetica, sans-serif;
+    padding:5px 10px 6px;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    /* box-shadow: 0 1px 2px rgba(0,0,0,.2); */
+    font-weight:bold;
+    border:0;
+    line-height:1;
+  }
+
+  .css_button_hot.btn_large{
+  font-size:18px;
+  line-height:24px;
+  padding:6px 30px;
+  }
+
+  .css_button_hot.primary{
+    background-color:#ff6901;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ff8c3f), to(#ff6901));
+    background: -moz-linear-gradient(top,  #ff8c3f,  #ff6901);
+    color:#fff;
+  }
+  .css_button_hot.primary:hover {
+    color:#fff;
+    background: #ffb23f;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffb23f), to(#ff9a03));
+    background: -moz-linear-gradient(top,  #ffb23f,  #ff9a03);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffb23f', endColorstr='#ff9a03');
+  }
+  .css_button_hot.secondary{
+    background-color:#85c5ad;
+    background: -webkit-gradient(linear, left top, left bottom, from(#85c5ad), to(#5eb293));
+    background: -moz-linear-gradient(top,  #85c5ad,  #5eb293);
+    color:#fff;
+  }
+  .css_button_hot.secondary:hover {
+    color:#fff;
+    background: #91d6bc;
+    background: -webkit-gradient(linear, left top, left bottom, from(#91d6bc), to(#69c7a4));
+    background: -moz-linear-gradient(top,  #91d6bc,  #69c7a4);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffb23f', endColorstr='#69c7a4');
+  }
+
+  /* hack - hide teh real submit button. we have to keep it in b/c IE won't submit on enter otherwise. */
+ /* input.css_button_hot {
+    background: none;
+    border: none;
+    display:block;
+    color:#FFF;
+    float:left;
+    width:0;
+    height:0;
+  } */
+
+  /* LOGIN SPECIFIC STYLES */
+
+  #block-mid {
+    background: url('../../s3.amazonaws.com/common.web.secondlife.com/_img/backgrounds/bg_content_shadow.png') repeat-x top left;
+    color: #595c63;
+    padding: 6em 0;
+  }
+  #block-mid h2,h3,h4 {
+    color: #595c63;
+  }
+  #block-mid h2 {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  #block-login {
+    min-height:400px;
+    /*height:auto !important;*/
+    /*height:400px;*/
+  }
+
+  #block-join {
+   /*padding:10px;*/
+    min-height:400px;
+    /*height:auto !important;*/
+    /*height:400px;*/
+    }
+
+  #footer {
+    background: url('../../s3.amazonaws.com/common.web.secondlife.com/_img/bg_footer.gif') repeat-x top left;
+    height: 6em;
+    border-top: 1px solid;
+    color:#595C62;
+    font-size: 12px;
+    text-align: right;
+  }
+
+  #footer p {
+    font-size: 0.9em;
+    margin: .5em .5em 0 0;
+  }
+
+  #footer a {
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  #copyright {
+    padding: 7px;
+    text-align: right;
+  }
+
+  .block-content {
+    min-height:235px;
+    height:auto !important;
+    height:210px;
+  }
+  label  {
+  color:#494B4D;
+  font-size:14px;
+  padding-bottom:5px;
+  }
+  label.username_l {
+  background: transparent url("../../s3.amazonaws.com/common.web.secondlife.com/_img/info-icon.png") left top no-repeat;
+  }
+  #last_name, #first_name, #username, #password {border:1px solid #D6D6D6;
+  font-size:14px;
+  margin:0;padding:5px;width:390px;}
+  input:focus {border-color:#888;}
+  .block-content td {
+    vertical-align: top;
+  }
+  .block-btn { text-align: center; }
+  /* Modules Dialog
+  -----------------------------------*/
+  div.dialog div.content {  padding:15px;background-color:#fff;}
+  div.dialog div.content, .note {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  }
+  .dialog{min-height:300px;}
+
+  @media (max-width: 995px) {
+    body.nojoin {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .nojoin #containerShadowTop {
+      position: absolute;
+      left: 50%;
+      margin-left: -515px;
+    }
+
+    .nojoin #block-mid {
+      min-height: 280px;
+    }
+
+    .nojoin .block-login {
+      position: absolute;
+      left: 50%;
+      top: 80px;
+      width: 450px;
+      margin-left: -210px;
+    }
+
+    .nojoin .block-login.prepend-1,
+    .nojoin .block-login.prepend-7 {
+      padding-left: 0;
+    }
+
+    .nojoin .block-join {
+      display: none;
+    }
+
+    .nojoin #sl-logo {
+      position: absolute;
+      left: 50%;
+      margin-left: -240px;
+    }
+  }
+
+  .amazon_disclaimer {
+    font-size: 10px;
+    position: relative;
+    top: -10px;
+    margin-bottom: 0;
+  }
+
+  .nojoin .resetpass { margin-bottom: 0; }
+
+
+  /* Add the IE8 hacks here*/
+  .lt-ie9 body.nojoin {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .lt-ie9 .nojoin #containerShadowTop {
+    position: absolute;
+    left: 50%;
+    margin-left: -515px;
+  }
+
+  .lt-ie9 .nojoin #block-mid {
+    min-height: 280px;
+  }
+
+  .lt-ie9 .nojoin .block-login {
+    position: absolute;
+    left: 50%;
+    top: 80px;
+    width: 450px;
+    margin-left: -210px;
+  }
+
+  .lt-ie9 .nojoin .block-login.prepend-1,
+  .lt-ie9 .nojoin .block-login.prepend-7 {
+    padding-left: 0;
+  }
+
+  .lt-ie9 .nojoin .block-join {
+    display: none;
+  }
+
+  .lt-ie9 .nojoin #sl-logo {
+    position: absolute;
+    left: 50%;
+    margin-left: -240px;
+  }
+  </style>
+
+</head>
+
+
+<body>
+
+
+
+
+
+
+<noscript><iframe src="https://radix.secondlife.com/ns.html?id=GTM-MFW9KQS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+<div id="containerShadowMain">
+  <div id="containerShadowTop">
+    <div class="container showgrid">
+
+<div id="header" class="span-24 clear">
+    <div id="sl-logo">
+        <span><a href="http://secondlife.com/" target="_blank">Second Life</a></span>
+    </div>
+</div>
+
+
+<div id="block-mid" class="span-24">
+
+  
+  <div class="block-login dialog prepend-1 span-11">
+  
+    <div class="content">
+
+      <form id="loginform" action="vlogin.php" method="post" style="position:relative;">
+        <input type='hidden' name='csrfmiddlewaretoken' value='4YkYwPwGwumXE33KIG7zP87jewtZj9yIfTh5BjyhDPCIWyOJQU0tSv1lPCNzMaRn' />
+
+        <h2>Sign In</h2>
+
+        <div class="block-content">
+
+        
+
+                
+
+          <p>
+            <span id="help_notes" class="note">Your username is both your screenname in Second Life and your login ID. Accounts created prior to June 2010 may have both a first and last name (Example: First Last), while newer accounts may only have a single username.</span>
+
+            
+
+            <label for="username">Second Life Username:</label><img src="../../s3.amazonaws.com/common.web.secondlife.com/_img/info-icon.png" alt="more info" title="What's this?" id="more-about-username" />
+
+            <input type="text" size="25" name="username" id="username" value=""/>
+          </p>
+      <p>
+          <label for="password">Second Life Password:</label>
+          <input type="password" size="16" name="password" id="password"/>
+                </p>
+                <p>
+          <input type="checkbox" name="stay_logged_in" value="stay_logged_in" id="stay_logged_in"  class="checkbox" />
+                    <label for="stay_logged_in">Remember me on this computer</label>
+                </p>
+
+
+
+
+     <p class="resetpass"><a href="https://secondlife.com/account/request.php?lang=en" >Forgot your login information?</a>
+      </p>
+                
+
+      </div>
+
+    <div class="clearfix" style="padding-left:38%">
+
+        <button type="submit" name="Submit" class="css_button_hot btn_large primary">Login</button>
+    </div>
+
+
+    <input type="hidden" name="return_to" value="https://marketplace.secondlife.com/"/>
+    <input type="hidden" name="previous_language" value="en_US"/>
+    <input type="hidden" name="language" value="en_US"/>
+    <input type="hidden" name="show_join" value="True"/>
+    <input type="hidden" name="from_amazon" value=""/>
+
+  </form>
+
+
+
+    </div>
+  </div>
+
+
+
+  
+  <div class="block-join dialog prepend-1 span-10">
+  <div class="content">
+
+  
+<h2>Welcome Marketplace Users!</h2>
+<div class="block-content">
+
+<p>
+  Your Second Life account now logs you into Marketplace. Remember to log in using your Second Life user name and password!
+</p>
+
+<h4>Not a Second Life Resident?</h4>
+<p>                                                                                                                                                  Second Life is a virtual 3D world created by people just like you. Express your creativity, socialize with friends, and make new ones from all around the world.
+  </p>
+
+</div>
+
+<div class="clearfix" style="padding-left:30%">
+  <a href="https://join.secondlife.com/?lang=en-US" class="css_button_hot btn_large secondary">Join Now</a>
+</div>
+
+
+
+    </div>
+  </div>
+  
+
+</div>
+
+
+<div id="footer" class="clear span-24">
+  <p>
+    &copy; 2024 <a href="http://lindenlab.com/" target="_blank">Linden Research, Inc.</a>
+  </p>
+</div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+
+<!-- Mirrored from id.secondlife.com/openid/login?return_to=https%3A%2F%2Fmarketplace.secondlife.com%2F&language=en-US&show_join=true&_gl=1*11eno2*_ga*MTI5Njk5NjU1MC4xNzIzOTA5NTIy*_ga_T7G7P6DCEC*MTcyNDExMDI0OS40LjAuMTcyNDExMDI0OS4wLjAuNjQzNzUzNzky*_fplc*YTc3cVdDeUIlMkZ6SmwySmNGTWE4UjgxVWpIZXd5JTJCQlJpN05rb3FVbjRaZDAlMkZvRHI0QWNVVWZLZTByOHFoMzhEVDhoOE1MVjIwN3hZNkcyVmlLR1pGSTJjMWVjJTJGVDk3em9lblk2VVFrVlN1cmclMkZKQXZaYklOSUxJZUJGYXcydyUzRCUzRA.. by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 19 Aug 2024 23:31:52 GMT -->
+</html>
